@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.25)
 
 include(cmake/vcpkg_env.cmake)
 
-project(cpp_cmake_project_template LANGUAGES CXX)
+project(std-parallel-container-ex LANGUAGES CXX)
 
 include(cmake/project_setting.cmake)
 

@@ -1,14 +1,14 @@
-add_library(cpp_cmake_project_template.static STATIC)
+add_library(std-parallel-container-ex.static STATIC)
 
 if (MSVC)
-    target_compile_options(cpp_cmake_project_template.static
+    target_compile_options(std-parallel-container-ex.static
         PRIVATE
             $<$<COMPILE_LANGUAGE:CXX>:/utf-8>
             $<$<COMPILE_LANGUAGE:CXX>:/Zc:preprocessor>
             $<$<COMPILE_LANGUAGE:CXX>:/std:c++23preview>
     )
 elseif (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-    target_compile_options(cpp_cmake_project_template.static
+    target_compile_options(std-parallel-container-ex.static
         PRIVATE
             $<$<COMPILE_LANGUAGE:CXX>:-Wall>
             $<$<COMPILE_LANGUAGE:CXX>:-Wextra>
@@ -19,26 +19,26 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     )
 endif()
 
-target_include_directories(cpp_cmake_project_template.static
+target_include_directories(std-parallel-container-ex.static
     PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
         $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>
         $<INSTALL_INTERFACE:include>
 )
 
-target_sources(cpp_cmake_project_template.static
+target_sources(std-parallel-container-ex.static
     PUBLIC
         static.cpp
         static.hpp
 )
 
-target_link_libraries(cpp_cmake_project_template.static
+target_link_libraries(std-parallel-container-ex.static
     PUBLIC
-        cpp_cmake_project_template.interface
+        std-parallel-container-ex.interface
 )
 
 find_package(fmt REQUIRED)
-target_link_libraries(cpp_cmake_project_template.static
+target_link_libraries(std-parallel-container-ex.static
     PUBLIC
         fmt::fmt
 )
