@@ -28,14 +28,6 @@ target_include_directories(std-parallel-container-ex.interface
 
 target_sources(std-parallel-container-ex.interface
     INTERFACE
-        global_regerr.hpp
+        syncer.hpp
 )
 
-
-find_package(fmt REQUIRED)
-find_package(spdlog REQUIRED)
-target_link_libraries(std-parallel-container-ex.interface
-    INTERFACE
-        fmt::fmt
-        spdlog::spdlog
-)

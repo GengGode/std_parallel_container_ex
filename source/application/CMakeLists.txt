@@ -37,8 +37,7 @@ target_sources(std-parallel-container-ex.app
 
 target_link_libraries(std-parallel-container-ex.app
     PRIVATE
-        std-parallel-container-ex
-        std-parallel-container-ex.static
+        std-parallel-container-ex.interface
 )
 
 find_package(fmt REQUIRED)

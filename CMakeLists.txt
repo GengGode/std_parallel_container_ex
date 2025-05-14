@@ -10,8 +10,6 @@ include(cmake/auto_increment_version.cmake)
 auto_generate_version(${CMAKE_SOURCE_DIR}/.version ${CMAKE_SOURCE_DIR}/.build_version)
 
 add_subdirectory(source/interface_library)
-add_subdirectory(source/static_library)
-add_subdirectory(source/library)
 add_subdirectory(source/application)
 
 if (BUILD_TESTING)
