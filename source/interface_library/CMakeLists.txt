@@ -28,6 +28,10 @@ target_include_directories(std-parallel-container-ex.interface
 
 target_sources(std-parallel-container-ex.interface
     INTERFACE
+        parallel_container
         syncer.hpp
+        one_call_function.hpp
+        self_releasing_async.hpp
+        single_async_executor.hpp
 )
 
